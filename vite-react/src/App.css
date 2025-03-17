@@ -1,0 +1,6 @@
+.parent-card-div {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}

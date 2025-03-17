@@ -1,11 +1,16 @@
 import React from "react";
+import "./App.css";
+import Card from "./components/card";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="parent-card-div">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
-};
+}
 
 export default App;
