@@ -4,29 +4,35 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [counter, setCounter] = useState(0);
-  // increase by 1
+  const [count, setCount] = useState(0);
+  const [message, setMessage] = useState("");
+  // increas button
   const increase = () => {
-    setCounter(counter + 1);
+    setCount(count + 1);
+    setMessage("");
   };
-
-  // decrease by 1
+  // decrease
   const decrease = () => {
-    if (counter > 0) {
-      setCounter(counter - 1);
+    if (count > 0) {
+      setCount(count - 1);
+    } else {
+      setMessage("Number can't go in minus there");
     }
   };
-
   // reset
   const reset = () => {
-    setCounter(counter * 0);
+    setCount(0);
+    setMessage("");
   };
-  // ...........
   return (
     <>
-      <h1>The Counter is {counter}</h1>
-      <button onClick={increase}>Increase by 1</button> <br /> <br />
-      <button onClick={decrease}>Decrease by 1</button> <br /> <br />
+      <h1>{message || `The Counter is ${count}`}</h1>
+      <button onClick={increase}>Increase</button>
+      <br />
+      <br />
+      <button onClick={decrease}>Decrease</button>
+      <br />
+      <br />
       <button onClick={reset}>Reset</button>
     </>
   );
