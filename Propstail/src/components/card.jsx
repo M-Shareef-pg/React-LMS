@@ -12,14 +12,9 @@ function Card(props) {
         <span className="block text-sm font-medium font-mono tracking-widest uppercase text-indigo-400">
           Marvel
         </span>
-        <h2 className="text-xl font-semibold tracking-wide">
-          {props.title}
-        </h2>
+        <h2 className="text-xl font-semibold tracking-wide">{props.title}</h2>
       </div>
-      <p className="text-gray-300">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        tempora ipsum soluta amet
-      </p>
+      <p className="text-gray-300">{props.description}</p>
     </div>
   );
 }
